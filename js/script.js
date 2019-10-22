@@ -1,5 +1,4 @@
 console.log('hahaha');
-console.log(cars);
 
 //objects - cars
 
@@ -21,16 +20,17 @@ var cars = [
   body:'sedan',
   year:2015,
   kms:65861,
-  trans:'auto',
+  trans:'auto'
   },
   {
+  photo:'images/car-test.jpg',
   make:'nissan',
   model:'pulsar',
   colour:'black',
   body:'sedan',
   year:2000,
   kms:210584,
-  trans:'manual',
+  trans:'manual'
   },
   {
   make:'mazda',
@@ -39,7 +39,7 @@ var cars = [
   body:'station wagon',
   year:2008,
   kms:154897,
-  trans:'auto',
+  trans:'auto'
   },
   {
   make:'mazda',
@@ -48,7 +48,7 @@ var cars = [
   body:'van',
   year:2016,
   kms:70540,
-  trans:'auto',
+  trans:'auto'
   },
   {
   make:'ford',
@@ -57,7 +57,7 @@ var cars = [
   body:'ute',
   year:1999,
   kms:245899,
-  trans:'manual',
+  trans:'manual'
   },
   {
   make:'mitsubishi',
@@ -66,7 +66,7 @@ var cars = [
   body:'ute',
   year:2013,
   kms:150121,
-  trans:'auto',
+  trans:'auto'
   },
   {
   make:'suzuki',
@@ -75,7 +75,7 @@ var cars = [
   body:'hatchback',
   year:2016,
   kms:190222,
-  trans:'auto',
+  trans:'auto'
   },
   {
   make:'toyota',
@@ -84,7 +84,7 @@ var cars = [
   body:'suv',
   year:2014,
   kms:99451,
-  trans:'manual',
+  trans:'manual'
   },
   {
   make:'ford',
@@ -93,7 +93,7 @@ var cars = [
   body:'suv',
   year:2018,
   kms:64558,
-  trans:'auto',
+  trans:'auto'
   },
   {
   make:'toyota',
@@ -105,57 +105,78 @@ var cars = [
   trans:'auto'
   },
   {
-  make:,
-  model:,
-  colour:,
-  body:,
-  year:,
-  kms:,
-  trans:,
+  make:'nissan',
+  model:'note',
+  colour:'blue',
+  body:'hatchback',
+  year:2008,
+  kms:'121489',
+  trans:'auto'
   },
   {
-  make:,
-  model:,
-  colour:,
-  body:,
-  year:,
-  kms:,
-  trans:,
+  make:'honda',
+  model:'accord',
+  colour:'grey',
+  body:'sedan',
+  year:2006,
+  kms:219876,
+  trans:'auto'
   },
   {
-  make:,
-  model:,
-  colour:,
-  body:,
-  year:,
-  kms:,
-  trans:,
+  make:'toyota',
+  model:'hilux',
+  colour:'black',
+  body:'suv',
+  year:2014,
+  kms:23986,
+  trans:'auto'
   },
   {
-  make:,
-  model:,
-  colour:,
-  body:,
-  year:,
-  kms:,
-  trans:,
+  make:'mazda',
+  model:'premacy',
+  colour:'white',
+  body:'van',
+  year:2007,
+  kms:'224576',
+  trans:'manual'
   },
   {
-  make:,
-  model:,
-  colour:,
-  body:,
-  year:,
-  kms:,
-  trans:,
+  make:'audi',
+  model:'rs6',
+  colour:'white',
+  body:'station wagon',
+  year:2014,
+  kms:12998,
+  trans:'auto'
   },
   {
-  make:,
-  model:,
-  colour:,
-  body:,
-  year:,
-  kms:,
-  trans:,
-  },
+  make:'hyundai',
+  model:'elantra',
+  colour:'red',
+  body:'hatchback',
+  year:2001,
+  kms:378996,
+  trans:'manual'
+  }
 ];
+
+for (var i = 0; i < cars.length; i++) {
+console.log(cars.length);
+document.getElementById('test').innerHTML
++= '<div class="card container">'
++ '<img class="card-img-top" src="'+cars[i].photo+'"alt="car"/>'
+
++ '<div class="card-body">'
+
+
++ '<h3 class"card-title>'+cars[i].make+'</h3>'
++ '<h3 class"car-title">'+cars[i].model+'</h3>'
++ '<p class"card-text">'+cars[i].colour+'</p>'
++ '<p class"card-text">'+cars[i].body+'</p>'
++ '<p class"card-text">'+cars[i].year+'</p>'
++ '<p class"card-text">'+cars[i].kms+'</p>'
++ '<p class"card-text">'+cars[i].trans+'</p></br>'
++ '</div>'
++ '</div>';
+
+}
