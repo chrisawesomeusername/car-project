@@ -1,0 +1,161 @@
+console.log('hahaha');
+console.log(cars);
+
+//objects - cars
+
+
+//data types---->
+//----make
+//----model
+//----year--numeric
+//----colour
+//----body
+//----km's--numeric
+//----transmission--boolean
+
+var cars = [
+  {
+  make:'toyota',
+  model:'corolla',
+  colour:'blue',
+  body:'sedan',
+  year:2015,
+  kms:65861,
+  trans:'auto',
+  },
+  {
+  make:'nissan',
+  model:'pulsar',
+  colour:'black',
+  body:'sedan',
+  year:2000,
+  kms:210584,
+  trans:'manual',
+  },
+  {
+  make:'mazda',
+  model:'alexa',
+  colour:'black',
+  body:'station wagon',
+  year:2008,
+  kms:154897,
+  trans:'auto',
+  },
+  {
+  make:'mazda',
+  model:'premacy',
+  colour:'red',
+  body:'van',
+  year:2016,
+  kms:70540,
+  trans:'auto',
+  },
+  {
+  make:'ford',
+  model:'falcon',
+  colour:'blue',
+  body:'ute',
+  year:1999,
+  kms:245899,
+  trans:'manual',
+  },
+  {
+  make:'mitsubishi',
+  model:'triton',
+  colour:'red',
+  body:'ute',
+  year:2013,
+  kms:150121,
+  trans:'auto',
+  },
+  {
+  make:'suzuki',
+  model:'swift',
+  colour:'grey',
+  body:'hatchback',
+  year:2016,
+  kms:190222,
+  trans:'auto',
+  },
+  {
+  make:'toyota',
+  model:'highlander',
+  colour:'white',
+  body:'suv',
+  year:2014,
+  kms:99451,
+  trans:'manual',
+  },
+  {
+  make:'ford',
+  model:'territory',
+  colour:'blue',
+  body:'suv',
+  year:2018,
+  kms:64558,
+  trans:'auto',
+  },
+  {
+  make:'toyota',
+  model:'avensis',
+  colour:'grey',
+  body:'station wagon',
+  year:2019,
+  kms:2100,
+  trans:'auto'
+  },
+  {
+  make:,
+  model:,
+  colour:,
+  body:,
+  year:,
+  kms:,
+  trans:,
+  },
+  {
+  make:,
+  model:,
+  colour:,
+  body:,
+  year:,
+  kms:,
+  trans:,
+  },
+  {
+  make:,
+  model:,
+  colour:,
+  body:,
+  year:,
+  kms:,
+  trans:,
+  },
+  {
+  make:,
+  model:,
+  colour:,
+  body:,
+  year:,
+  kms:,
+  trans:,
+  },
+  {
+  make:,
+  model:,
+  colour:,
+  body:,
+  year:,
+  kms:,
+  trans:,
+  },
+  {
+  make:,
+  model:,
+  colour:,
+  body:,
+  year:,
+  kms:,
+  trans:,
+  },
+];
