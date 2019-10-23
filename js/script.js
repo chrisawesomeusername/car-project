@@ -197,26 +197,41 @@ theCars();
 
 // var testing = cars[i].year;
 // document.getElementById('test').innerHTML = testing;
+//
+// document.getElementById('yearBtn').addEventListener('click',function(){
+//   var temp = 0;
+//   // var newArray=[];
+//   // newArray = sortObj(cars, 'year');
+//   // console.log(newArray);
+//   // document.getElementById('test').innerHTML = testing;
+//   for (var i = 0; i <(cars.length-1); i++) {
+//     for (var j = i+1; j < cars.length; j++) {
+//
+//     if (cars[i].year < cars[j].year) {
+//       temp= cars[i].year;
+//
+//
+//       cars[i].year = cars[j].year;
+//       cars[j].year = temp;
+//     }
+//
+//
+//   }
+//   }
+// console.log(cars);
+// });
 
 document.getElementById('yearBtn').addEventListener('click',function(){
-  var temp = 0;
-  // var newArray=[];
-  // newArray = sortObj(cars, 'year');
-  // console.log(newArray);
-  // document.getElementById('test').innerHTML = testing;
-  for (var i = 0; i <(cars.length-1); i++) {
-    for (var j = i+1; j < cars.length; j++) {
 
-    if (cars[i].year < cars[j].year) {
-      temp= cars[i].year;
+  function compare(a, b) {
+ var comparison = 0;
+ if (a.year < b.year) {
+   comparison = 1;
+ } else if (a.year > b.year) {
+   comparison = -1;
+ }
+ return comparison;
+}
+console.log(cars.sort(compare));
 
-
-      cars[i].year = cars[j].year;
-      cars[j].year = temp;
-    }
-
-
-  }
-  }
-console.log(cars);
 });
