@@ -11,20 +11,23 @@
 
     <title>hey</title>
   </head>
-  <body>
+  <body class="container">
     <div class="jumbotron">
-      <p class="text-center">here are some cars</p>
+      <h1 class="text-center font-weight-lighter">Here are some cars!</h1>
     </div>
 
-    <!-- <div class="card container">
-      <div class="card-body">
-        <div id="test"></div>
-      </div>
-    </div> -->
-
-    <div  id="test">
-
+    <div class="button-section">
+      <button type="button" id="yearBtn" class="btn btn-primary btn-sm">Sort by year (asc/desc)</button>
+      <button type="button" id="kmsBtn" class="btn btn-primary btn-sm">Sort by Kms (asc/desc)</button>
+      <button type="button" id="transBtn" class="btn btn-primary btn-sm">Sort by transmission(auto/manual)</button>
     </div>
+
+    <div class="card-container">
+      <div class="row" id="test"></div>
+    </div>
+
+
+
 
 
 

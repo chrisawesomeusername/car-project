@@ -14,6 +14,7 @@ console.log('hahaha');
 
 var cars = [
   {
+  photo:'images/c01.jpg',
   make:'toyota',
   model:'corolla',
   colour:'blue',
@@ -23,7 +24,7 @@ var cars = [
   trans:'auto'
   },
   {
-  photo:'images/car-test.jpg',
+  photo:'images/c02.jpg',
   make:'nissan',
   model:'pulsar',
   colour:'black',
@@ -33,8 +34,9 @@ var cars = [
   trans:'manual'
   },
   {
+  photo:'images/c03.jpg',
   make:'mazda',
-  model:'alexa',
+  model:'axela',
   colour:'black',
   body:'station wagon',
   year:2008,
@@ -42,6 +44,7 @@ var cars = [
   trans:'auto'
   },
   {
+  photo:'images/c04.jpg',
   make:'mazda',
   model:'premacy',
   colour:'red',
@@ -51,6 +54,7 @@ var cars = [
   trans:'auto'
   },
   {
+  photo:'images/c05.jpg',
   make:'ford',
   model:'falcon',
   colour:'blue',
@@ -60,6 +64,7 @@ var cars = [
   trans:'manual'
   },
   {
+  photo:'images/c06.jpg',
   make:'mitsubishi',
   model:'triton',
   colour:'red',
@@ -69,6 +74,7 @@ var cars = [
   trans:'auto'
   },
   {
+  photo:'images/c07.jpg',
   make:'suzuki',
   model:'swift',
   colour:'grey',
@@ -78,6 +84,7 @@ var cars = [
   trans:'auto'
   },
   {
+  photo:'images/c08.jpg',
   make:'toyota',
   model:'highlander',
   colour:'white',
@@ -87,6 +94,7 @@ var cars = [
   trans:'manual'
   },
   {
+  photo:'images/c09.jpg',
   make:'ford',
   model:'territory',
   colour:'blue',
@@ -96,6 +104,7 @@ var cars = [
   trans:'auto'
   },
   {
+  photo:'images/c10.jpg',
   make:'toyota',
   model:'avensis',
   colour:'grey',
@@ -105,6 +114,7 @@ var cars = [
   trans:'auto'
   },
   {
+  photo:'images/c11.jpg',
   make:'nissan',
   model:'note',
   colour:'blue',
@@ -114,6 +124,7 @@ var cars = [
   trans:'auto'
   },
   {
+  photo:'images/c12.jpg',
   make:'honda',
   model:'accord',
   colour:'grey',
@@ -123,6 +134,7 @@ var cars = [
   trans:'auto'
   },
   {
+  photo:'images/c13.jpg',
   make:'toyota',
   model:'hilux',
   colour:'black',
@@ -132,6 +144,7 @@ var cars = [
   trans:'auto'
   },
   {
+  photo:'images/c14.jpg',
   make:'mazda',
   model:'premacy',
   colour:'white',
@@ -141,6 +154,7 @@ var cars = [
   trans:'manual'
   },
   {
+  photo:'images/c15.jpg',
   make:'audi',
   model:'rs6',
   colour:'white',
@@ -150,6 +164,7 @@ var cars = [
   trans:'auto'
   },
   {
+  photo:'images/c16.jpg',
   make:'hyundai',
   model:'elantra',
   colour:'red',
@@ -160,23 +175,48 @@ var cars = [
   }
 ];
 
+
+function theCars(){
 for (var i = 0; i < cars.length; i++) {
 console.log(cars.length);
 document.getElementById('test').innerHTML
-+= '<div class="card container">'
-+ '<img class="card-img-top" src="'+cars[i].photo+'"alt="car"/>'
-
++= '<div class="card p-3 mb-2 col-3">'
++ '<img class="card-img-top shadow car-img" src="'+cars[i].photo+'"alt="car"/>'
 + '<div class="card-body">'
-
-
-+ '<h3 class"card-title>'+cars[i].make+'</h3>'
-+ '<h3 class"car-title">'+cars[i].model+'</h3>'
++ '<h3 class"card-title">'+cars[i].make+' '+cars[i].model+'</h3>'
 + '<p class"card-text">'+cars[i].colour+'</p>'
 + '<p class"card-text">'+cars[i].body+'</p>'
 + '<p class"card-text">'+cars[i].year+'</p>'
 + '<p class"card-text">'+cars[i].kms+'</p>'
-+ '<p class"card-text">'+cars[i].trans+'</p></br>'
++ '<p class"card-text">'+cars[i].trans+'</p>'
 + '</div>'
-+ '</div>';
++ '</div>'
+;}}
 
-}
+theCars();
+
+// var testing = cars[i].year;
+// document.getElementById('test').innerHTML = testing;
+
+document.getElementById('yearBtn').addEventListener('click',function(){
+  var temp = 0;
+  // var newArray=[];
+  // newArray = sortObj(cars, 'year');
+  // console.log(newArray);
+  // document.getElementById('test').innerHTML = testing;
+  for (var i = 0; i <(cars.length-1); i++) {
+    for (var j = i+1; j < cars.length; j++) {
+
+    if (cars[i].year < cars[j].year) {
+      temp= cars[i].year;
+
+
+      cars[i].year = cars[j].year;
+      cars[j].year = temp;
+    }
+
+
+  }
+  }
+console.log(cars);
+});
