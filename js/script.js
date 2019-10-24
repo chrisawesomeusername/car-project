@@ -274,10 +274,13 @@ theCars();
 
 //----TRANS SORT----------------------------------------------------------------
 document.getElementById('transA').addEventListener('click',function(){
-  for (var i=0; i<cars.trans; i++){
-    console.log('asdf');
-    if(cars[i].trans === 'auto'){
-      cars.splice([i].trans);
+  document.getElementById('test').innerHTML = ' ';
+
+  for (var i=0; i<cars.length; i++){
+    if (cars.trans === 'auto'){
+      cars.trans.splice(cars.trans[i], 1);
+      i--;
     }
   }
+  // theCars();
 });
