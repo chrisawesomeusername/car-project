@@ -120,7 +120,7 @@ var cars = [
   colour:'blue',
   body:'hatchback',
   year:2008,
-  kms:'121489',
+  kms:121489,
   trans:'auto'
   },
   {
@@ -150,7 +150,7 @@ var cars = [
   colour:'white',
   body:'van',
   year:2007,
-  kms:'224576',
+  kms:224576,
   trans:'manual'
   },
   {
@@ -184,54 +184,100 @@ document.getElementById('test').innerHTML
 + '<img class="card-img-top shadow car-img" src="'+cars[i].photo+'"alt="car"/>'
 + '<div class="card-body">'
 + '<h3 class"card-title">'+cars[i].make+' '+cars[i].model+'</h3>'
-+ '<p class"card-text">'+cars[i].colour+'</p>'
-+ '<p class"card-text">'+cars[i].body+'</p>'
-+ '<p class"card-text">'+cars[i].year+'</p>'
-+ '<p class"card-text">'+cars[i].kms+'</p>'
-+ '<p class"card-text">'+cars[i].trans+'</p>'
++ '<p class"card-text">colour - '+cars[i].colour+'</p>'
++ '<p class"card-text">body type - '+cars[i].body+'</p>'
++ '<p class"card-text">year - '+cars[i].year+'</p>'
++ '<p class"card-text">kilometers - '+cars[i].kms+'</p>'
++ '<p class"card-text">transmission - '+cars[i].trans+'</p>'
 + '</div>'
-+ '</div>'
-;}}
-
++ '</div>';
+}
+}
 theCars();
 
-// var testing = cars[i].year;
-// document.getElementById('test').innerHTML = testing;
-//
-// document.getElementById('yearBtn').addEventListener('click',function(){
-//   var temp = 0;
-//   // var newArray=[];
-//   // newArray = sortObj(cars, 'year');
-//   // console.log(newArray);
-//   // document.getElementById('test').innerHTML = testing;
-//   for (var i = 0; i <(cars.length-1); i++) {
-//     for (var j = i+1; j < cars.length; j++) {
-//
-//     if (cars[i].year < cars[j].year) {
-//       temp= cars[i].year;
-//
-//
-//       cars[i].year = cars[j].year;
-//       cars[j].year = temp;
-//     }
-//
-//
-//   }
-//   }
-// console.log(cars);
-// });
 
-document.getElementById('yearBtn').addEventListener('click',function(){
-
-  function compare(a, b) {
- var comparison = 0;
- if (a.year < b.year) {
-   comparison = 1;
- } else if (a.year > b.year) {
-   comparison = -1;
- }
- return comparison;
+//----YEAR SORT-----------------------------------------------------------------
+//sort by Descending
+document.getElementById('yearDescBtn').addEventListener('click',function(){
+  document.getElementById('test').innerHTML = ' ';
+function compareYear(a, b) {
+var comparisonYear = 0;
+if (a.year < b.year) {
+ comparisonYear = 1;
+} else if (a.year > b.year) {
+ comparisonYear = -1;
 }
-console.log(cars.sort(compare));
+return comparisonYear;
+}
 
+cars.sort(compareYear);
+console.log(cars.sort(compareYear));
+theCars();
+});
+
+//sort by Ascending
+document.getElementById('yearAscBtn').addEventListener('click',function(){
+  document.getElementById('test').innerHTML = ' ';
+function compareYear(a, b) {
+var comparisonYear = 0;
+if (a.year > b.year) {
+ comparisonYear = 1;
+} else if (a.year < b.year) {
+ comparisonYear = -1;
+}
+return comparisonYear;
+}
+
+cars.sort(compareYear);
+console.log(cars.sort(compareYear));
+theCars();
+});
+//------------------------------------------------------------------------------
+
+//----KMS SORT------------------------------------------------------------------
+//sort by Descending
+document.getElementById('kmsDescBtn').addEventListener('click',function(){
+  document.getElementById('test').innerHTML = ' ';
+function compareKms(a, b) {
+var comparisonKms = 0;
+if (a.kms < b.kms) {
+ comparisonKms = 1;
+} else if (a.kms > b.kms) {
+ comparisonKms = -1;
+}
+return comparisonKms;
+}
+
+cars.sort(compareKms);
+console.log(cars.sort(compareKms));
+theCars();
+});
+
+//sort by Ascending
+document.getElementById('kmsAscBtn').addEventListener('click',function(){
+  document.getElementById('test').innerHTML = ' ';
+function compareKms(a, b) {
+var comparisonKms = 0;
+if (a.kms > b.kms) {
+ comparisonKms = 1;
+} else if (a.kms < b.kms) {
+ comparisonKms = -1;
+}
+return comparisonKms;
+}
+
+cars.sort(compareKms);
+console.log(cars.sort(compareKms));
+theCars();
+});
+//------------------------------------------------------------------------------
+
+//----TRANS SORT----------------------------------------------------------------
+document.getElementById('transA').addEventListener('click',function(){
+  for (var i=0; i<cars.trans; i++){
+    console.log('asdf');
+    if(cars[i].trans === 'auto'){
+      cars.splice([i].trans);
+    }
+  }
 });

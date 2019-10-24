@@ -15,16 +15,42 @@
     <div class="jumbotron">
       <h1 class="text-center font-weight-lighter">Here are some cars!</h1>
     </div>
+<div class="row">
+  <div class="col-2">
+    <div class="dropdowns button-section mb-4 ">
+      <button class="year btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By Year</button>
 
-    <div class="button-section">
-      <button type="button" id="yearBtn" class="btn btn-primary btn-sm">Sort by year (asc/desc)</button>
-      <button type="button" id="kmsBtn" class="btn btn-primary btn-sm">Sort by Kms (asc/desc)</button>
-      <button type="button" id="transBtn" class="btn btn-primary btn-sm">Sort by transmission(auto/manual)</button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <a class="dropdown-item" id="yearDescBtn" href="#">Descending</a>
+        <a class="dropdown-item" id="yearAscBtn" href="#">Ascending</a>
+      </div>
     </div>
+  </div>
+  <div class="col-2">
+    <div class="dropdowns button-section mb-4">
+      <button class="kms btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By KMS</button>
 
-    <div class="card-container">
-      <div class="row" id="test"></div>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+        <a class="dropdown-item" id="kmsDescBtn" href="#">Descending</a>
+        <a class="dropdown-item" id="kmsAscBtn" href="#">Ascending</a>
+      </div>
     </div>
+  </div>
+  <div class="col-2">
+    <div class="dropdowns button-section mb-4">
+      <button class="trans btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Transmission</button>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+        <a class="dropdown-item" id="transA" href="#">Automatic</a>
+        <a class="dropdown-item" id="transM" href="#">Manual</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card-container">
+  <div class="row" id="test"></div>
+</div>
 
 
 
