@@ -179,21 +179,28 @@ var cars = [
 function theCars(){
 for (var i = 0; i < cars.length; i++) {
 console.log(cars.length);
-document.getElementById('test').innerHTML
-+= '<div class="card p-3 mb-2 col-3">'
-+ '<img class="card-img-top shadow car-img" src="'+cars[i].photo+'"alt="car"/>'
-+ '<div class="card-body">'
-+ '<h3 class"card-title">'+cars[i].make+' '+cars[i].model+'</h3>'
-+ '<p class"card-text">colour - '+cars[i].colour+'</p>'
-+ '<p class"card-text">body type - '+cars[i].body+'</p>'
-+ '<p class"card-text">year - '+cars[i].year+'</p>'
-+ '<p class"card-text">kilometers - '+cars[i].kms+'</p>'
-+ '<p class"card-text">transmission - '+cars[i].trans+'</p>'
-+ '</div>'
-+ '</div>';
+displayCars(i)
 }
 }
+
+
 theCars();
+
+
+function displayCars(j){
+  document.getElementById('test').innerHTML
+  += '<div class="card p-3 mb-2 col-3">'
+  + '<img class="card-img-top shadow car-img" src="'+cars[j].photo+'"alt="car"/>'
+  + '<div class="card-body">'
+  + '<h3 class"card-title">'+cars[j].make+' '+cars[j].model+'</h3>'
+  + '<p class"card-text">colour - '+cars[j].colour+'</p>'
+  + '<p class"card-text">body type - '+cars[j].body+'</p>'
+  + '<p class"card-text">year - '+cars[j].year+'</p>'
+  + '<p class"card-text">kilometers - '+cars[j].kms+'</p>'
+  + '<p class"card-text">transmission - '+cars[j].trans+'</p>'
+  + '</div>'
+  + '</div>';
+};
 
 
 //----YEAR SORT-----------------------------------------------------------------
@@ -275,12 +282,12 @@ theCars();
 //----TRANS SORT----------------------------------------------------------------
 document.getElementById('transA').addEventListener('click',function(){
   document.getElementById('test').innerHTML = ' ';
-
   for (var i=0; i<cars.length; i++){
-    if (cars.trans === 'auto'){
-      cars.trans.splice(cars.trans[i], 1);
-      i--;
+    if (cars[i].trans === 'auto'){
+      displayCars(i);
+
     }
+
   }
   // theCars();
 });
