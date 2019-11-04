@@ -186,7 +186,6 @@ displayCars(i)
 
 theCars();
 
-
 function displayCars(j){
   document.getElementById('test').innerHTML
   += '<div class="card p-3 mb-2 col-3">'
@@ -286,6 +285,17 @@ document.getElementById('transA').addEventListener('click',function(){
     if (cars[i].trans === 'auto'){
       displayCars(i);
 
+    }
+
+  }
+  // theCars();
+});
+
+document.getElementById('transM').addEventListener('click',function(){
+  document.getElementById('test').innerHTML = ' ';
+  for (var i=0; i<cars.length; i++){
+    if (cars[i].trans === 'manual'){
+      displayCars(i);
     }
 
   }
